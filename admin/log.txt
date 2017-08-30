@@ -1,0 +1,423 @@
+09.02.2017, 19:14:45[CONSOLE]: Account registration has been initiated 
+09.02.2017, 19:14:45[CONSOLE]: Variable check completed 
+09.02.2017, 19:14:45[CONSOLE]: Required fields check completed 
+09.02.2017, 19:14:45[CONSOLE]: Password check completed 
+09.02.2017, 19:14:45[CONSOLE]: Username check completed 
+09.02.2017, 19:14:45[CONSOLE]: Email address check completed 
+09.02.2017, 19:14:46[CONSOLE]: Account registration has been successful. E-mail has been sent 
+09.02.2017, 19:14:46[CONSOLE]: Finished registration cycle for TechWizard
+ 
+09.02.2017, 19:18:16[CONSOLE]: Log-in attempt started 
+09.02.2017, 19:18:16[CONSOLE]: Stripping tags completed 
+09.02.2017, 19:18:16[CONSOLE]: Required fields check completed 
+09.02.2017, 19:18:16[CHECK]: Username has been found in the database 
+09.02.2017, 19:18:16[CHECK]: Password matched the one in the database 
+09.02.2017, 19:18:16[CONSOLE]: Log In check completed 
+09.02.2017, 19:18:16[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 19:18:16[CONSOLE]: Welcome message has been set 
+09.02.2017, 19:18:16[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:02:29[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:02:29[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:02:29[CONSOLE]: Required fields check completed 
+09.02.2017, 20:02:29[CHECK]: Username has been found in the database 
+09.02.2017, 20:02:29[CHECK]: Password matched the one in the database 
+09.02.2017, 20:02:29[CONSOLE]: Log In check completed 
+09.02.2017, 20:02:29[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:02:29[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:02:29[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:03:08[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:03:08[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:03:08[CONSOLE]: Required fields check completed 
+09.02.2017, 20:03:08[CHECK]: Username has been found in the database 
+09.02.2017, 20:03:08[CHECK]: Password matched the one in the database 
+09.02.2017, 20:03:08[CONSOLE]: Log In check completed 
+09.02.2017, 20:03:08[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:03:08[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:03:08[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:04:03[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:04:03[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:04:03[CONSOLE]: Required fields check completed 
+09.02.2017, 20:04:03[CHECK]: Username has been found in the database 
+09.02.2017, 20:04:03[CHECK]: Password matched the one in the database 
+09.02.2017, 20:04:03[CONSOLE]: Log In check completed 
+09.02.2017, 20:04:03[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:04:03[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:04:03[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:05:05[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:05:05[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:05:05[CONSOLE]: Required fields check completed 
+09.02.2017, 20:05:05[CHECK]: Username has been found in the database 
+09.02.2017, 20:05:05[CHECK]: Password matched the one in the database 
+09.02.2017, 20:05:05[CONSOLE]: Log In check completed 
+09.02.2017, 20:05:05[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:05:05[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:05:05[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:11:22[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:11:22[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:11:22[CONSOLE]: Required fields check completed 
+09.02.2017, 20:11:22[CHECK]: Username has been found in the database 
+09.02.2017, 20:11:22[CHECK]: Password matched the one in the database 
+09.02.2017, 20:11:22[CONSOLE]: Log In check completed 
+09.02.2017, 20:11:22[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:11:22[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:11:22[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:12:52[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:12:52[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:12:52[CONSOLE]: Required fields check completed 
+09.02.2017, 20:12:52[CHECK]: Username has been found in the database 
+09.02.2017, 20:12:52[CHECK]: Password matched the one in the database 
+09.02.2017, 20:12:52[CONSOLE]: Log In check completed 
+09.02.2017, 20:12:52[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:12:52[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:12:52[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:17:14[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:17:14[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:17:14[CONSOLE]: Required fields check completed 
+09.02.2017, 20:17:14[CHECK]: Username has been found in the database 
+09.02.2017, 20:17:14[CHECK]: Password matched the one in the database 
+09.02.2017, 20:17:14[CONSOLE]: Log In check completed 
+09.02.2017, 20:17:14[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:17:14[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:17:14[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:19:50[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:19:50[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:19:50[CONSOLE]: Required fields check completed 
+09.02.2017, 20:19:50[CHECK]: Username has been found in the database 
+09.02.2017, 20:19:50[CHECK]: Password matched the one in the database 
+09.02.2017, 20:19:50[CONSOLE]: Log In check completed 
+09.02.2017, 20:19:50[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:19:50[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:19:50[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:20:24[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:20:24[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:20:24[CONSOLE]: Required fields check completed 
+09.02.2017, 20:20:24[CHECK]: Username has been found in the database 
+09.02.2017, 20:20:24[CHECK]: Password matched the one in the database 
+09.02.2017, 20:20:24[CONSOLE]: Log In check completed 
+09.02.2017, 20:20:24[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:20:24[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:20:24[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:20:57[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:20:57[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:20:57[CONSOLE]: Required fields check completed 
+09.02.2017, 20:20:57[CHECK]: Username has been found in the database 
+09.02.2017, 20:20:57[CHECK]: Password matched the one in the database 
+09.02.2017, 20:20:57[CONSOLE]: Log In check completed 
+09.02.2017, 20:20:57[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:20:57[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:20:57[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:24:20[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:24:20[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:24:20[CONSOLE]: Required fields check completed 
+09.02.2017, 20:24:20[CHECK]: Username has been found in the database 
+09.02.2017, 20:24:20[CHECK]: Password matched the one in the database 
+09.02.2017, 20:24:20[CONSOLE]: Log In check completed 
+09.02.2017, 20:24:20[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:24:20[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:24:20[CONSOLE]: Message has been displayed 
+
+09.02.2017, 20:25:54[CONSOLE]: Log-in attempt started 
+09.02.2017, 20:25:54[CONSOLE]: Stripping tags completed 
+09.02.2017, 20:25:54[CONSOLE]: Required fields check completed 
+09.02.2017, 20:25:54[CHECK]: Username has been found in the database 
+09.02.2017, 20:25:54[CHECK]: Password matched the one in the database 
+09.02.2017, 20:25:54[CONSOLE]: Log In check completed 
+09.02.2017, 20:25:54[CONSOLE]: TechWizard has succesfully logged in 
+09.02.2017, 20:25:54[CONSOLE]: Welcome message has been set 
+09.02.2017, 20:25:54[CONSOLE]: Message has been displayed 
+
+16.02.2017, 18:38:16[CONSOLE]: Log-in attempt started 
+16.02.2017, 18:38:16[CONSOLE]: Stripping tags completed 
+16.02.2017, 18:38:16[CONSOLE]: Required fields check completed 
+16.02.2017, 18:38:16[CHECK]: Username has been found in the database 
+16.02.2017, 18:38:16[CHECK]: Password matched the one in the database 
+16.02.2017, 18:38:16[CONSOLE]: Log In check completed 
+16.02.2017, 18:38:16[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 18:38:16[CONSOLE]: Welcome message has been set 
+16.02.2017, 18:38:16[CONSOLE]: Message has been displayed 
+
+16.02.2017, 18:47:29[CONSOLE]: Log-in attempt started 
+16.02.2017, 18:47:29[CONSOLE]: Stripping tags completed 
+16.02.2017, 18:47:29[CONSOLE]: Required fields check completed 
+16.02.2017, 18:47:29[CHECK]: Username has been found in the database 
+16.02.2017, 18:47:29[CHECK]: Password matched the one in the database 
+16.02.2017, 18:47:29[CONSOLE]: Log In check completed 
+16.02.2017, 18:47:29[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 18:47:29[CONSOLE]: Welcome message has been set 
+16.02.2017, 18:47:29[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:27:12[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:27:12[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:27:12[CONSOLE]: Required fields check completed 
+16.02.2017, 19:27:12[CHECK]: Username has been found in the database 
+16.02.2017, 19:27:12[CHECK]: Password matched the one in the database 
+16.02.2017, 19:27:12[CONSOLE]: Log In check completed 
+16.02.2017, 19:27:12[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:27:12[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:27:12[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:37:13[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:37:13[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:37:13[CONSOLE]: Required fields check completed 
+16.02.2017, 19:37:13[CHECK]: Username has been found in the database 
+16.02.2017, 19:37:13[CHECK]: Password matched the one in the database 
+16.02.2017, 19:37:13[CONSOLE]: Log In check completed 
+16.02.2017, 19:37:13[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:37:13[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:37:13[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:38:20[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:38:20[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:38:20[CONSOLE]: Required fields check completed 
+16.02.2017, 19:38:20[CHECK]: Username has been found in the database 
+16.02.2017, 19:38:20[CHECK]: Password matched the one in the database 
+16.02.2017, 19:38:20[CONSOLE]: Log In check completed 
+16.02.2017, 19:38:20[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:38:20[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:38:20[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:40:20[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:40:20[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:40:20[CONSOLE]: Required fields check completed 
+16.02.2017, 19:40:20[CHECK]: Username has been found in the database 
+16.02.2017, 19:40:20[CHECK]: Password matched the one in the database 
+16.02.2017, 19:40:20[CONSOLE]: Log In check completed 
+16.02.2017, 19:40:20[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:40:20[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:40:20[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:40:39[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:40:39[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:40:39[CONSOLE]: Required fields check completed 
+16.02.2017, 19:40:39[CHECK]: Username has been found in the database 
+16.02.2017, 19:40:39[CHECK]: Password matched the one in the database 
+16.02.2017, 19:40:39[CONSOLE]: Log In check completed 
+16.02.2017, 19:40:39[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:40:39[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:40:39[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:42:40[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:42:40[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:42:40[CONSOLE]: Required fields check completed 
+16.02.2017, 19:42:40[CHECK]: Username has been found in the database 
+16.02.2017, 19:42:40[CHECK]: Password matched the one in the database 
+16.02.2017, 19:42:40[CONSOLE]: Log In check completed 
+16.02.2017, 19:42:40[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:42:40[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:42:40[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:49:31[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:49:31[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:49:31[CONSOLE]: Required fields check completed 
+16.02.2017, 19:49:31[CHECK]: Username has been found in the database 
+16.02.2017, 19:49:31[CHECK]: Password matched the one in the database 
+16.02.2017, 19:49:31[CONSOLE]: Log In check completed 
+16.02.2017, 19:49:31[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:49:31[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:49:31[CONSOLE]: Message has been displayed 
+
+16.02.2017, 19:50:22[CONSOLE]: Log-in attempt started 
+16.02.2017, 19:50:22[CONSOLE]: Stripping tags completed 
+16.02.2017, 19:50:22[CONSOLE]: Required fields check completed 
+16.02.2017, 19:50:22[CHECK]: Username has been found in the database 
+16.02.2017, 19:50:22[CHECK]: Password matched the one in the database 
+16.02.2017, 19:50:22[CONSOLE]: Log In check completed 
+16.02.2017, 19:50:22[CONSOLE]: TechWizard has succesfully logged in 
+16.02.2017, 19:50:22[CONSOLE]: Welcome message has been set 
+16.02.2017, 19:50:22[CONSOLE]: Message has been displayed 
+
+16.03.2017, 18:56:36[CONSOLE]: Log-in attempt started 
+16.03.2017, 18:56:37[CONSOLE]: Stripping tags completed 
+16.03.2017, 18:56:37[CONSOLE]: Required fields check completed 
+16.03.2017, 18:56:37[ERROR]: Username has not been found in the database 
+16.03.2017, 18:56:37[ERROR]: Password did not match the one in the databse 
+16.03.2017, 18:56:37[CONSOLE]: Log In check completed 
+16.03.2017, 18:56:37[CONSOLE]: Error message has been set 
+16.03.2017, 18:56:37[CONSOLE]: Message has been displayed 
+
+16.03.2017, 18:58:07[CONSOLE]: Log-in attempt started 
+16.03.2017, 18:58:07[CONSOLE]: Stripping tags completed 
+16.03.2017, 18:58:07[CONSOLE]: Required fields check completed 
+16.03.2017, 18:58:07[ERROR]: Username has not been found in the database 
+16.03.2017, 18:58:07[ERROR]: Password did not match the one in the databse 
+16.03.2017, 18:58:07[CONSOLE]: Log In check completed 
+16.03.2017, 18:58:07[CONSOLE]: Error message has been set 
+16.03.2017, 18:58:07[CONSOLE]: Message has been displayed 
+
+16.03.2017, 18:58:11[CONSOLE]: Log-in attempt started 
+16.03.2017, 18:58:11[CONSOLE]: Stripping tags completed 
+16.03.2017, 18:58:11[CONSOLE]: Required fields check completed 
+16.03.2017, 18:58:11[ERROR]: Username has not been found in the database 
+16.03.2017, 18:58:11[ERROR]: Password did not match the one in the databse 
+16.03.2017, 18:58:11[CONSOLE]: Log In check completed 
+16.03.2017, 18:58:11[CONSOLE]: Error message has been set 
+16.03.2017, 18:58:11[CONSOLE]: Message has been displayed 
+
+16.03.2017, 18:59:34[CONSOLE]: Log-in attempt started 
+16.03.2017, 18:59:34[CONSOLE]: Stripping tags completed 
+16.03.2017, 18:59:34[CONSOLE]: Required fields check completed 
+16.03.2017, 18:59:34[ERROR]: Username has not been found in the database 
+16.03.2017, 18:59:34[ERROR]: Password did not match the one in the databse 
+16.03.2017, 18:59:34[CONSOLE]: Log In check completed 
+16.03.2017, 18:59:34[CONSOLE]: Error message has been set 
+16.03.2017, 18:59:34[CONSOLE]: Message has been displayed 
+
+16.03.2017, 19:05:40[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:05:40[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:05:40[CONSOLE]: Required fields check completed 
+16.03.2017, 19:05:40[CHECK]: Username has been found in the database 
+16.03.2017, 19:05:40[CHECK]: Password matched the one in the database 
+16.03.2017, 19:05:40[CONSOLE]: Log In check completed 
+16.03.2017, 19:05:41[CONSOLE]: TechWizard has succesfully logged in 
+16.03.2017, 19:05:41[CONSOLE]: Welcome message has been set 
+16.03.2017, 19:05:41[CONSOLE]: Message has been displayed 
+
+16.03.2017, 19:10:13[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:10:13[CONSOLE]: Variable check completed 
+16.03.2017, 19:10:13[CONSOLE]: Required fields check completed 
+16.03.2017, 19:10:13[CONSOLE]: Password check completed 
+16.03.2017, 19:10:57[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:10:57[CONSOLE]: Variable check completed 
+16.03.2017, 19:10:57[CONSOLE]: Required fields check completed 
+16.03.2017, 19:10:57[CONSOLE]: Password check completed 
+16.03.2017, 19:10:57[CONSOLE]: Username check completed 
+16.03.2017, 19:10:57[CONSOLE]: Email address check completed 
+16.03.2017, 19:10:58[ERROR]: Account registration was not successful 
+16.03.2017, 19:10:58[CONSOLE]: Finished registration cycle for TechTest
+ 
+16.03.2017, 19:13:07[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:13:07[CONSOLE]: Variable check completed 
+16.03.2017, 19:13:07[CONSOLE]: Required fields check completed 
+16.03.2017, 19:13:07[CONSOLE]: Password check completed 
+16.03.2017, 19:13:07[ERROR]: Username already exists 
+16.03.2017, 19:13:07[CONSOLE]: Username check completed 
+16.03.2017, 19:13:07[ERROR]: Email address has already been used 
+16.03.2017, 19:13:07[CONSOLE]: Email address check completed 
+16.03.2017, 19:13:07[CONSOLE]: Error message set 
+16.03.2017, 19:13:07[CONSOLE]: Finished registration cycle for TechTest
+ 
+16.03.2017, 19:13:26[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:13:26[CONSOLE]: Variable check completed 
+16.03.2017, 19:13:26[CONSOLE]: Required fields check completed 
+16.03.2017, 19:13:26[CONSOLE]: Password check completed 
+16.03.2017, 19:13:26[ERROR]: Username already exists 
+16.03.2017, 19:13:26[CONSOLE]: Username check completed 
+16.03.2017, 19:13:26[ERROR]: Email address has already been used 
+16.03.2017, 19:13:26[CONSOLE]: Email address check completed 
+16.03.2017, 19:13:26[CONSOLE]: Error message set 
+16.03.2017, 19:13:26[CONSOLE]: Finished registration cycle for TechTest
+ 
+16.03.2017, 19:14:39[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:14:39[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:14:39[CONSOLE]: Required fields check completed 
+16.03.2017, 19:14:39[CHECK]: Username has been found in the database 
+16.03.2017, 19:14:39[CHECK]: Password matched the one in the database 
+16.03.2017, 19:14:39[CONSOLE]: Log In check completed 
+16.03.2017, 19:14:39[CONSOLE]: TechTest has succesfully logged in 
+16.03.2017, 19:14:39[CONSOLE]: Welcome message has been set 
+16.03.2017, 19:14:39[CONSOLE]: Message has been displayed 
+
+16.03.2017, 19:19:07[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:19:07[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:19:07[CONSOLE]: Required fields check completed 
+16.03.2017, 19:19:24[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:19:24[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:19:24[CONSOLE]: Required fields check completed 
+16.03.2017, 19:20:20[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:20:20[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:20:20[CONSOLE]: Required fields check completed 
+16.03.2017, 19:20:32[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:20:32[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:20:32[CONSOLE]: Required fields check completed 
+16.03.2017, 19:21:05[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:21:05[CONSOLE]: Variable check completed 
+16.03.2017, 19:21:05[CONSOLE]: Required fields check completed 
+16.03.2017, 19:21:05[CONSOLE]: Password check completed 
+16.03.2017, 19:21:37[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:21:37[CONSOLE]: Variable check completed 
+16.03.2017, 19:21:37[CONSOLE]: Required fields check completed 
+16.03.2017, 19:21:37[CONSOLE]: Password check completed 
+16.03.2017, 19:22:48[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:22:48[CONSOLE]: Variable check completed 
+16.03.2017, 19:22:48[CONSOLE]: Required fields check completed 
+16.03.2017, 19:22:48[CONSOLE]: Password check completed 
+16.03.2017, 19:24:27[CONSOLE]: Account registration has been initiated 
+16.03.2017, 19:24:27[CONSOLE]: Variable check completed 
+16.03.2017, 19:24:27[CONSOLE]: Required fields check completed 
+16.03.2017, 19:24:27[CONSOLE]: Password check completed 
+16.03.2017, 19:24:27[CONSOLE]: Username check completed 
+16.03.2017, 19:24:27[CONSOLE]: Email address check completed 
+16.03.2017, 19:24:28[CONSOLE]: Account registration has been successful. E-mail has been sent 
+16.03.2017, 19:24:28[CONSOLE]: Finished registration cycle for Test
+ 
+16.03.2017, 19:27:46[CONSOLE]: Log-in attempt started 
+16.03.2017, 19:27:46[CONSOLE]: Stripping tags completed 
+16.03.2017, 19:27:46[CONSOLE]: Required fields check completed 
+16.03.2017, 19:27:46[CHECK]: Username has been found in the database 
+16.03.2017, 19:27:46[CHECK]: Password matched the one in the database 
+16.03.2017, 19:27:46[CONSOLE]: Log In check completed 
+16.03.2017, 19:27:46[CONSOLE]: TechWizard has succesfully logged in 
+16.03.2017, 19:27:46[CONSOLE]: Welcome message has been set 
+16.03.2017, 19:27:46[CONSOLE]: Message has been displayed 
+
+06.04.2017, 18:14:06[CONSOLE]: Log-in attempt started 
+06.04.2017, 18:14:06[CONSOLE]: Stripping tags completed 
+06.04.2017, 18:14:06[CONSOLE]: Required fields check completed 
+06.04.2017, 18:14:07[CHECK]: Username has been found in the database 
+06.04.2017, 18:14:07[CHECK]: Password matched the one in the database 
+06.04.2017, 18:14:07[CONSOLE]: Log In check completed 
+06.04.2017, 18:14:07[CONSOLE]: TechWizard has succesfully logged in 
+06.04.2017, 18:14:07[CONSOLE]: Welcome message has been set 
+06.04.2017, 18:14:07[CONSOLE]: Message has been displayed 
+
+11.04.2017, 18:11:05[CONSOLE]: Log-in attempt started 
+11.04.2017, 18:11:05[CONSOLE]: Stripping tags completed 
+11.04.2017, 18:11:05[CONSOLE]: Required fields check completed 
+11.04.2017, 18:11:05[CHECK]: Username has been found in the database 
+11.04.2017, 18:11:05[CHECK]: Password matched the one in the database 
+11.04.2017, 18:11:05[CONSOLE]: Log In check completed 
+11.04.2017, 18:11:05[CONSOLE]: TechWizard has succesfully logged in 
+11.04.2017, 18:11:05[CONSOLE]: Welcome message has been set 
+11.04.2017, 18:11:05[CONSOLE]: Message has been displayed 
+
+11.05.2017, 18:30:17[CONSOLE]: Log-in attempt started 
+11.05.2017, 18:30:18[CONSOLE]: Stripping tags completed 
+11.05.2017, 18:30:18[CONSOLE]: Required fields check completed 
+11.05.2017, 18:30:18[CHECK]: Username has been found in the database 
+11.05.2017, 18:30:18[CHECK]: Password matched the one in the database 
+11.05.2017, 18:30:18[CONSOLE]: Log In check completed 
+11.05.2017, 18:30:18[CONSOLE]: TechWizard has succesfully logged in 
+11.05.2017, 18:30:18[CONSOLE]: Welcome message has been set 
+11.05.2017, 18:30:18[CONSOLE]: Message has been displayed 
+
+08.06.2017, 18:43:08[CONSOLE]: Log-in attempt started 
+08.06.2017, 18:43:08[CONSOLE]: Stripping tags completed 
+08.06.2017, 18:43:08[CONSOLE]: Required fields check completed 
+08.06.2017, 18:43:08[CHECK]: Username has been found in the database 
+08.06.2017, 18:43:08[CHECK]: Password matched the one in the database 
+08.06.2017, 18:43:08[CONSOLE]: Log In check completed 
+08.06.2017, 18:43:08[CONSOLE]: TechWizard has succesfully logged in 
+08.06.2017, 18:43:08[CONSOLE]: Welcome message has been set 
+08.06.2017, 18:43:08[CONSOLE]: Message has been displayed 
+
+08.06.2017, 19:32:08[CONSOLE]: Log-in attempt started 
+08.06.2017, 19:32:08[CONSOLE]: Stripping tags completed 
+08.06.2017, 19:32:08[CONSOLE]: Required fields check completed 
+08.06.2017, 19:32:08[CHECK]: Username has been found in the database 
+08.06.2017, 19:32:08[CHECK]: Password matched the one in the database 
+08.06.2017, 19:32:08[CONSOLE]: Log In check completed 
+08.06.2017, 19:32:08[CONSOLE]: TechWizard has succesfully logged in 
+08.06.2017, 19:32:08[CONSOLE]: Welcome message has been set 
+08.06.2017, 19:32:08[CONSOLE]: Message has been displayed 
+

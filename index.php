@@ -24,7 +24,6 @@
         include($rootdir . "style/navigation.inc.php");
     ?>
     <div id="content">
-        <br />
         <h1>
             TechWizard Productions
         </h1>
