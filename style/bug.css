@@ -1,0 +1,72 @@
+body {
+    margin: 0 5% 0 5%;
+    background-color: #C7C7C7;
+}
+
+#logo {
+    display: block;
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding: 15px;
+    background-color: #00FFE6;
+    text-decoration: none;
+}
+
+nav ul li a:visited{
+    color: black;
+}
+
+nav ul li a:link{
+    color: black;
+}
+
+nav ul li a:hover{
+    background-color:#0E897D;
+}
+
+.bug{
+     border-collapse: collapse;
+}
+
+.bug td{
+    border: 1px solid black;
+}
+
+.bug th{
+    border: 1px solid black;
+}
+
+#VoteYes {
+    background-color: #00FFE6;
+}
+
+#VoteNo {
+    background-color: red;
+}
+
+.bugList{
+     border-collapse: collapse;
+}
+
+.bugList td{
+    border: 1px solid black;
+}
+
+td img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
