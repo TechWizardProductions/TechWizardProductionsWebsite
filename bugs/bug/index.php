@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 08/06/2017-->
-<head>
-    <?php 
-        $rootdir = "../../";
-    ?>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">
-    <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
-    <title>Bug Tracker | TechWizard Productions</title>
-</head>
-<body>
-    <img src="<?php echo $rootdir; ?>images/bugbanner.png" alt="TechWizard Productions Bug Tracker" id="logo">
-    <?php
-    if(session_id() == ''){
+<?php
         session_start();
-    }
+        $rootdir = "../../";
+        ini_set(display_warnings, 1);
+        error_reporting(E_ALL);
     if(isset($_SESSION['timeout']) && isset($_SESSION['auth'])){
         if($_SESSION['timeout'] >= time() && $_SESSION['auth'] == true){
             include($rootdir . "style/bugNav.inc.php");
@@ -28,37 +15,46 @@
         </script>';
     }
         include($rootdir . "admin/database.inc.php");
-        connectDatabase();
+        $database = connectDatabase();
         $bug_ID = $_GET['id'];
 
     if($_POST['yes'] || $_POST['no']){
             if($_POST['yes']){
                 $RequestVotes = "SELECT votes FROM bugs WHERE bug_ID = " . $bug_ID;
-                $votes = parseQuery($RequestVotes);
+                $votes = parseQuery($database, $RequestVotes);
 
                 $votes['votes'] += 1;
 
                 $UpdateVotes = "UPDATE bugs SET votes = " . $votes['votes'] . " WHERE bug_ID = " . $bug_ID;
-                parseQueryOnly($UpdateVotes);
+                parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
             }
 
             if($_POST['no']){
                 $RequestVotes = "SELECT votes FROM bugs WHERE bug_ID = " . $bug_ID;
-                $votes = parseQuery($RequestVotes);
+                $votes = parseQuery($database, $RequestVotes);
 
                 $votes['votes'] -= 1;
 
                 $UpdateVotes = "UPDATE bugs SET votes = " . $votes['votes'] . " WHERE bug_ID = " . $bug_ID;
-                parseQueryOnly($UpdateVotes);
+                parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
             }
     }
+        $RequestReport = 'SELECT * FROM bugs WHERE bug_ID = ' . $bug_ID;
+        $bug = parseQuery($database, $RequestReport);
     ?>
-    <?php
-        $RequestReport = "SELECT * FROM bugs WHERE bug_ID = " . $bug_ID;
-        $bug = parseQuery($RequestReport);
-    ?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- Last edited on 08/06/2017-->
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
+    <title>Bug Tracker | TechWizard Productions</title>
+</head>
+<body>
+    <img src="<?php echo $rootdir; ?>images/bugbanner.png" alt="TechWizard Productions Bug Tracker" id="logo">
     <br /> <br/>
     <h1>
         Bug Report
