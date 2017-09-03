@@ -4,3 +4,6 @@
 /images/**
 /.vscode/**
 /.ssh/**
+.bash_history
+.gitconfig
+.viminfo
