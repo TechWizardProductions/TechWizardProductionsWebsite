@@ -1,5 +1,5 @@
-y:/programmeren/website/xampp/htdocs/admin
-y:/programmeren/website/xampp/htdocs/music
-y:/programmeren/website/xampp/htdocs/videos
-y:/programmeren/website/xampp/htdocs/images
-y:/programmeren/website/xampp/htdocs/.vscode
+/admin/**
+/music/**
+/videos/**
+/images/**
+/.vscode/**
