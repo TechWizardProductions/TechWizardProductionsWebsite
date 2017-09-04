@@ -1,10 +1,11 @@
+<?php
+    $rootdir = "../";
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 09/02/2017 -->
+<!-- Last edited on 04/09/2017 -->
 <head>
-    <?php
-        $rootdir = "../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir ?>style/style.css">
     <title>Edit Account Details | TechWizard Productions</title>
