@@ -1,10 +1,11 @@
+<?php
+    $rootdir = "../";
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 02/02/2017 -->
+<!-- Last edited on 04/09/2017 -->
 <head>
-    <?php
-        $rootdir = "../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir ?>style/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -13,7 +14,6 @@
 <body>
     <?php
         include($rootdir . "style/header.inc.php");
-
         include($rootdir . "style/navigation.inc.php");
     ?>
     <div id="content">
