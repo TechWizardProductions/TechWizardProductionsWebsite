@@ -17,7 +17,6 @@
         include($rootdir . "style/navigation.inc.php");
     ?>
     <div id="content">
-    <br />
         <?php
         if($_SESSION['auth'] == true && $_SESSION['timeout'] >= time()){
            $_SESSION['timeout'] = time() + $_SESSION['timeoutTime'];

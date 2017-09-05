@@ -27,7 +27,6 @@
         include($rootdir . "style/navigation.inc.php");
         ?>
         <div id="content">
-        <br/>
         <h1>
             Patch Index
         </h1>

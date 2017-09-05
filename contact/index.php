@@ -18,7 +18,6 @@
         include($rootdir . "style/navigation.inc.php");
     ?>
     <div id="content">
-        <br />
         <p>
             <h1>
                 Contact

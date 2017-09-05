@@ -16,11 +16,10 @@
         include($rootdir . "style/navigation.inc.php");
     ?>
     <div id="content">
-    <br />
         <?php
          if($_SESSION['auth'] == true && $_SESSION['timeout'] >= time()){
            $_SESSION['timeout'] = time() + $_SESSION['timeoutTime'];
-           echo '<br> </br>';
+           echo "<h1>Edit Account Information</h1>";
             include($rootdir . "forms/editInfo.inc.php");
         } else {
         echo 'This session has timed out. Please log in again <a href="'. $rootdir .'/register-login">here</a>';

@@ -1,4 +1,3 @@
-<br/>
 <h1>
     The Legacy Patches
 </h1>

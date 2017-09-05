@@ -19,7 +19,6 @@
 
     ?>
     <div id="content">
-        <br />
         <p>
             <h1>
                 No Limits 2 - The Rift

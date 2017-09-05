@@ -20,7 +20,8 @@
         }
     }
     ?>
-    <br></br>
+    <br />
+    <br />
     <h1>
         TechWizard Productions Bug Tracker
     </h1>

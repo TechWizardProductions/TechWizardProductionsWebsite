@@ -34,7 +34,6 @@ include($rootdir . "admin/database.inc.php");
         } else if(is_null($patch['patch_ID'])){
             echo "The Patch ID is invalid. Please go back to the page you came from and retry. If this problem persists, please contact us via the contact page.";
         } else {
-            echo "<br/>";
             echo "<h1>
                     Patch: " . $patch['number'] . "
                   </h1>";
