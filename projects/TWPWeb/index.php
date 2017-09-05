@@ -1,10 +1,37 @@
+<?php
+    $rootdir = "../../";
+    session_start();
+    include($rootdir . "admin/database.inc.php");
+    
+            $database = connectDatabase();
+    
+            $SQLRequestPatch = "SELECT patch_ID FROM twppatches ORDER BY patch_ID DESC LIMIT 1";
+            $patchID = parseQuery($database, $SQLRequestPatch);
+    
+            $max = $patchID['patch_ID'];
+            $max++;
+    
+            $j = 1;
+    
+            for($i = 1; $i < $max; $i++){
+                $patch = $max - $i;
+    
+                $SQLRequestPatchNote = "SELECT * FROM twppatches WHERE patch_ID = " . $patch . "";
+                ${'data' . $i} = parseQuery($database, $SQLRequestPatchNote);
+            }
+    
+            $patches = 0;
+    
+            for($k = 1; $k <= 5; $k++){
+                if (isset (${'data' . $k})){
+                    $patches ++;
+                }
+            }
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 06/04/2017 -->
+<!-- Last edited on 05/09/2017 -->
 <head>
-    <?php
-        $rootdir = "../../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="../../style/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -15,33 +42,6 @@
         include("../../style/header.inc.php");
 
         include("../../style/navigation.inc.php");
-
-        include($rootdir . "admin/database.inc.php");
-
-        connectDatabase();
-
-        $SQLRequestPatch = "SELECT patch_ID FROM twppatches ORDER BY patch_ID DESC LIMIT 1";
-        $patchID = parseQuery($SQLRequestPatch);
-
-        $max = $patchID['patch_ID'];
-        $max++;
-
-        $j = 1;
-
-        for($i = 1; $i < $max; $i++){
-            $patch = $max - $i;
-
-            $SQLRequestPatchNote = "SELECT * FROM twppatches WHERE patch_ID = " . $patch . "";
-            ${'data' . $i} = parseQuery($SQLRequestPatchNote);
-        }
-
-        $patches = 0;
-
-        for($k = 1; $k <= 5; $k++){
-            if (isset (${'data' . $k})){
-                $patches ++;
-            }
-        }
     ?>
     <div id="content">
         <br />

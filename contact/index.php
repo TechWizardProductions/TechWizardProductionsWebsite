@@ -1,10 +1,11 @@
+<?php
+    $rootdir = "../";
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 02/02/2016-->
+<!-- Last edited on 05/09/2016-->
 <head>
-    <?php
-        $rootdir = "../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -32,8 +33,6 @@
                       </p>';
             }
             include($rootdir . 'forms/contact.inc.php');
-        ?>
-        <?php
             include($rootdir . "style/footer.inc.php");
         ?>
     </div>

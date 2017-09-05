@@ -1,9 +1,101 @@
+<?php
+$rootdir = "../";
+session_start();
+include($rootdir . "admin/database.inc.php");
+$username = strip_tags($_POST['username']);
+$firstName = strip_tags($_POST['firstName']);
+$lastName = strip_tags($_POST['lastName']);
+$password = strip_tags($_POST['password']);
+$passwordA = strip_tags($_POST['passwordA']);
+$email = strip_tags($_POST['email']);
+
+$database = connectDatabase();
+//Logging code
+//Define Timezone
+date_default_timezone_set("Europe/Amsterdam");
+//Open log file
+$logFile = fopen($rootdir . "admin/log.txt", "a");
+//Insert log information
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Account registration has been initiated \n"); 
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Variable check completed \n");
+
+//Check if all the required fields are filled in and set an error message accordingly if it isn't filled in
+if (strlen($username) == 0){
+    $errormsg = 'You have not entered a username.';
+
+    //Log code
+     fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty username \n");
+}
+if (strlen($password) == 0){
+    $errormsg.= 'You have not entered a password.';
+
+    //Log code
+     fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty password \n");
+
+}
+if (strlen($passwordA) == 0){
+    $errormsg.= 'You have not confirmed your password.';
+
+    //Log code
+     fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty confirmation password \n");
+
+}
+if (strlen($email) == 0){
+    $errormsg.= 'You have not entered an e-mail address.';
+
+     //Log code
+     fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty email address \n");
+
+}
+
+//Log code
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Required fields check completed \n");
+
+
+//Check if both passwords entered are identical
+if ($password !== $passwordA){
+    $errormsg.= 'Your passwords do not match.';
+
+    //Log code
+     fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Passwords entered do not match \n");
+
+}
+
+//Log code
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Password check completed \n");
+
+$SQLRequestUsr = "SELECT username FROM Accounts WHERE username = '". $username ."'";
+$data = parseQuery($database, $SQLRequestUsr);
+//Username Check
+if ($data ['username'] == $username){
+    $errormsg.= 'The username you have chosen already exists. Please choose another.';
+
+    //Log code
+    fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Username already exists \n");
+
+}
+
+//Log code
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Username check completed \n");
+
+//Email Check
+$SQLRequestEmail = "SELECT email FROM Accounts WHERE email = '". $email ."'";
+$data2 = parseQuery($database, $SQLRequestEmail);
+
+if ($data2['email'] == $email){
+    $errormsg.= 'The email address you have used is already registered. If you believe this is an error please contact us via the contact page.';
+
+    //Log Code
+    fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Email address has already been used \n");
+}
+
+//Log Code
+fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Email address check completed \n");
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- Last edited on 05/09/2017 -->
 <head>
-    <?php
-        $rootdir = '../';
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -17,98 +109,6 @@
     ?>
     <div id="content">
         <?php
-            include($rootdir . "admin/database.inc.php");
-            $username = strip_tags($_POST['username']);
-            $firstName = strip_tags($_POST['firstName']);
-            $lastName = strip_tags($_POST['lastName']);
-            $password = strip_tags($_POST['password']);
-            $passwordA = strip_tags($_POST['passwordA']);
-            $email = strip_tags($_POST['email']);
-            
-            connectDatabase();
-            //Logging code
-            //Define Timezone
-            date_default_timezone_set("Europe/Amsterdam");
-            //Open log file
-            $logFile = fopen($rootdir . "admin/log.txt", "a");
-            //Insert log information
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Account registration has been initiated \n"); 
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Variable check completed \n");
-
-            //Check if all the required fields are filled in and set an error message accordingly if it isn't filled in
-            if (strlen($username) == 0){
-                $errormsg = 'You have not entered a username.';
-
-                //Log code
-                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty username \n");
-            }
-            if (strlen($password) == 0){
-                $errormsg.= 'You have not entered a password.';
-
-                //Log code
-                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty password \n");
-
-            }
-            if (strlen($passwordA) == 0){
-                $errormsg.= 'You have not confirmed your password.';
-
-                //Log code
-                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty confirmation password \n");
-
-            }
-            if (strlen($email) == 0){
-                $errormsg.= 'You have not entered an e-mail address.';
-
-                 //Log code
-                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Detected an empty email address \n");
-
-            }
-
-            //Log code
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Required fields check completed \n");
-
-
-            //Check if both passwords entered are identical
-            if ($password !== $passwordA){
-                $errormsg.= 'Your passwords do not match.';
-
-                //Log code
-                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Passwords entered do not match \n");
-
-            }
-
-            //Log code
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Password check completed \n");
-
-            $SQLRequestUsr = "SELECT username FROM Accounts WHERE username = '". $username ."'";
-            $data = parseQuery($SQLRequestUsr);
-            //Username Check
-            if ($data ['username'] == $username){
-                $errormsg.= 'The username you have chosen already exists. Please choose another.';
-
-                //Log code
-                fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Username already exists \n");
-
-            }
-
-            //Log code
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Username check completed \n");
-
-            //Email Check
-            $SQLRequestEmail = "SELECT email FROM Accounts WHERE email = '". $email ."'";
-            $data2 = parseQuery($SQLRequestEmail);
-
-            if ($data2['email'] == $email){
-                $errormsg.= 'The email address you have used is already registered. If you believe this is an error please contact us via the contact page.';
-
-                //Log Code
-                fputs($logFile, date("d.m.Y, H:i:s", time()) . "[ERROR]: Email address has already been used \n");
-            }
-
-            //Log Code
-            fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Email address check completed \n");
-
-
             //Set the error message if one or more of the required fields hasn't been filled in
             if (isset($errormsg)){
                 $msg = 'Registering your account has failed due to <br />';
@@ -122,7 +122,7 @@
             } else {
                 //Send records to the database
                 $SQLRegisterUsr = "INSERT INTO Accounts (username, password, firstName, lastName, email) VALUES ('". $username . "', '" . $password . "', '" . $firstName . "', '" . $lastName . "', '" . $email . "')";
-                $registered = parseQuery($SQLRegisterUsr);
+                $registered = parseQuery($database, $SQLRegisterUsr);
 
                 if(!is_null($registered)){
                     $msg = "Your account registration has been succesful. We have sent you an e-mail with your account details.";
@@ -164,16 +164,13 @@
                 }
             }
 
-                mysql_close();
+                mysqli_close($database);
 
 
                 //Log code
                 fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Finished registration cycle for " . $username . "\n \n");
                 fclose($logFile);
-
-        ?>
-        <?php
-            include($rootdir . "style/footer.inc.php");
+                ($rootdir . "style/footer.inc.php");
         ?>
     </div>
 </body>

@@ -11,6 +11,7 @@
         window.alert("You are not logged in and thus do not have access to this page. Please login on the next page");
         window.location.href = "'.$rootdir.'/register-login";
         </script>';
+        exit;
     }
         include($rootdir . "admin/database.inc.php");
         $database = connectDatabase();
@@ -47,7 +48,7 @@
     ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 03/09/2017-->
+<!-- Last edited on 05/09/2017-->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">

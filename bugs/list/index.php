@@ -1,9 +1,6 @@
 <?php
     $rootdir = "../../";
         session_start();
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
     if(isset($_SESSION['timeout']) && isset($_SESSION['auth'])){
         if($_SESSION['timeout'] >= time() && $_SESSION['auth'] == true){
             include($rootdir . "style/bugNav.inc.php");
@@ -14,6 +11,7 @@
         window.alert("You are not logged in and thus do not have access to this page. Please login on the next page");
         window.location.href = "'.$rootdir.'/register-login";
         </script>';
+        exit;
     }
     function csort(array $a, array $b){
         if($b['votes'] < $a['votes']){
@@ -87,7 +85,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 11/04/2017-->
+<!-- Last edited on 05/09/2017-->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">

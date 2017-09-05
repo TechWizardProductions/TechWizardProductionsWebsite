@@ -1,8 +1,5 @@
 <?php
 $rootdir = "../";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 include($rootdir . "admin/database.inc.php");
 $username = strip_tags($_POST['username']);
 $password = strip_tags($_POST['password']);
@@ -95,6 +92,7 @@ if ($usrStat ==true && $pwrdStat == true){
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!-- Last edited on 05/09/2017 -->
 <head>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/style.css">

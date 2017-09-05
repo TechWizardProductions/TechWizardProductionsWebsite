@@ -1,10 +1,20 @@
+<?php
+    $rootdir = "../../../";
+    session_start();
+    include($rootdir . "admin/database.inc.php");
+    
+            $database = connectDatabase();
+    
+            $SQLRequestPatch = "SELECT patch_ID FROM twppatches ORDER BY patch_ID DESC LIMIT 1";
+            $patchID = parseQuery($database, $SQLRequestPatch);
+    
+            $max = $patchID['patch_ID'];
+            $max++;
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 06/04/2017 -->
+<!-- Last edited on 05/09/2017 -->
 <head>
-    <?php
-        $rootdir = "../../../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -15,16 +25,6 @@
         include($rootdir . "style/header.inc.php");
 
         include($rootdir . "style/navigation.inc.php");
-
-        include($rootdir . "admin/database.inc.php");
-
-        connectDatabase();
-
-        $SQLRequestPatch = "SELECT patch_ID FROM twppatches ORDER BY patch_ID DESC LIMIT 1";
-        $patchID = parseQuery($SQLRequestPatch);
-
-        $max = $patchID['patch_ID'];
-        $max++;
         ?>
         <div id="content">
         <br/>

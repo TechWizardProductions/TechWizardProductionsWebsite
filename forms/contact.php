@@ -18,7 +18,7 @@
     ?>
     <div id="content">
 <?php
-/*  Last edited on 16/03/2017 */
+/*  Last edited on 05/09/2017 */
     $name = strip_tags($_POST['name']);
     $email = strip_tags($_POST['email']);
     $topic = strip_tags($_POST['topic']);
@@ -81,13 +81,9 @@
 
         $msg = 'Your message has been processed succesfully. A confirmation E-mail has been sent to you as well.';
     }
-?>
-        <?php
             echo '<br></br>';
             echo '<br />';
             echo $msg;
-        ?>
-        <?php
             include($rootdir . "style/footer.inc.php");
         ?>
     </div>

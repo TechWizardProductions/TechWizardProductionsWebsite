@@ -1,10 +1,11 @@
+<?php
+    $rootdir = "../";
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 11/04/2017-->
+<!-- Last edited on 05/09/2017-->
 <head>
-    <?php 
-        $rootdir = "../";
-    ?>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
@@ -13,9 +14,6 @@
 <body>
     <img src="<?php echo $rootdir; ?>images/bugbanner.png" alt="TechWizard Productions Bug Tracker" id="logo">
     <?php
-    if(session_id() == ''){
-        session_start();
-    }
     if(isset($_SESSION['timeout']) && isset($_SESSION['auth'])){
         if($_SESSION['timeout'] >= time() && $_SESSION['auth'] == true){
             include($rootdir . "style/bugNav.inc.php");

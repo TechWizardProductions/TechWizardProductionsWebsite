@@ -1,12 +1,11 @@
 <?php
     $rootdir = "../";
-    session_unset();
-    $_SESSION['auth']=false;
-    $_SESSION['patch']="1.0.3";
+    session_start();
+    $_SESSION['auth'] = false;
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 16/02/2017 -->
+<!-- Last edited on 05/09/2017 -->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir ?>style/style.css">
