@@ -7,8 +7,8 @@ $rootdir = "../";
 <!-- Last edited on 05/09/2017 -->
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="'.$rootdir.'style/style.css">
-    <link rel="icon" type="image/x-icon" href="'.$rootdir.'images/logoSmall.ico">
+    <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/style.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo $rootdir; ?>images/logoSmall.ico">
     <title>Register / Log In | TechWizard Productions</title>
 </head>
 <body>
@@ -31,6 +31,7 @@ $rootdir = "../";
         echo "Already a member? Log in below!";
         
         include($rootdir . "forms/logIn.inc.php");
+        }
         ?>
     </div>
     <?php
