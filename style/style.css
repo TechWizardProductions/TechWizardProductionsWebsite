@@ -103,12 +103,12 @@ dropdown:hover .dropbtn{
     background-color: #0E897D;
 }
 
-.dropdownContent:hover {
-    background-color: #0E897D;
-}
-
 .dropdown:hover .dropdownContent{
     display: block;
+}
+
+.dropdownContent a:hover {
+    background-color: #0E897C;
 }
 
 #bugNav {
