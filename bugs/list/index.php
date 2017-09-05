@@ -34,10 +34,10 @@
     include($rootdir . "admin/database.inc.php");
     $database = connectDatabase();
     //Getting a list of bugs, sorted by category
-    $SQLRequestfixedBugs = 'SELECT bug_ID, name, votes, user, date FROM bugs WHERE status = "fixed"';
-    $SQLRequestinProgressBugs = 'SELECT bug_ID, name, votes, user, date FROM bugs WHERE status = "In Progress"';
-    $SQLRequestConfirmedBugs = 'SELECT bug_ID, name, votes, user, date FROM bugs WHERE status = "confirmed"';
-    $SQLRequestUnconfirmedBugs = 'SELECT bug_ID, name, votes, user, date FROM bugs WHERE status = "unconfirmed"';
+    $SQLRequestfixedBugs = 'SELECT bug_ID, name, user, date FROM bugs WHERE status = "fixed"';
+    $SQLRequestinProgressBugs = 'SELECT bug_ID, name, user, date FROM bugs WHERE status = "In Progress"';
+    $SQLRequestConfirmedBugs = 'SELECT bug_ID, name, user, date FROM bugs WHERE status = "confirmed"';
+    $SQLRequestUnconfirmedBugs = 'SELECT bug_ID, name, user, date FROM bugs WHERE status = "unconfirmed"';
 
     //Checking if the list is there
     $fixedBugs = parseQueryOnly($database, $SQLRequestfixedBugs);
@@ -53,33 +53,89 @@
 
     if(gettype($fixedBugs) == 'object'){
         $sRequest = mysqli_query($database, $SQLRequestfixedBugs);
-        $s = 0;
         while($SB = mysqli_fetch_assoc($sRequest)){
             $fixed[] = $SB;
+        }
+
+        $countFixed = count($fixed);
+        if($countFixed != 0){
+            $countFixed--;
+            $f = -1;
+            while($countFixed != $f){
+                $f++;
+                $SQLRequestYesVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $fixed[$f]['bug_ID'] . ' AND vote = "yes"';
+                $SQLRequestNoVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $fixed[$f]['bug_ID'] . ' AND vote = "no"';
+                $yesVotes = parseQuery($database, $SQLRequestYesVotes);
+                $noVotes = parseQuery($database, $SQLRequestNoVotes);
+                $votes = $yesVotes[0] - $noVotes[0];
+                $fixed[$f]['votes'] = $votes;
+            }
         }
     }
 
     if(gettype($inProgressBugs) == 'object'){
         $pRequest = mysqli_query($database, $SQLRequestinProgressBugs);
-        $p = 0;
         while($PB = mysqli_fetch_assoc($pRequest)){
             $inProgress[] = $PB;
+        }
+
+        $countInProgress = count($inProgress);
+        if($countInProgress != 0){
+            $countInProgress--;
+            $p = -1;
+            while($countInProgress != $p){
+                $p++;
+                $SQLRequestYesVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $inProgress[$p]['bug_ID'] . ' AND vote = "yes"';
+                $SQLRequestNoVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $inProgress[$p]['bug_ID'] . ' AND vote = "no"';
+                $yesVotes = parseQuery($database, $SQLRequestYesVotes);
+                $noVotes = parseQuery($database, $SQLRequestNoVotes);
+                $votes = $yesVotes[0] - $noVotes[0];
+                $inProgress[$p]['votes'] = $votes;
+            }
         }
     }
 
     if(gettype($confirmedBugs) == 'object'){
         $cRequest = mysqli_query($database, $SQLRequestConfirmedBugs);
-        $c = 0;
         while($CB = mysqli_fetch_assoc($cRequest)){
             $confirmed[] = $CB;
+        }
+
+        $countConfirmed = count($confirmed);
+        if($countConfirmed != 0){
+            $countConfirmed--;
+            $c = -1;
+            while($countConfirmed != $c){
+                $c++;
+                $SQLRequestYesVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $confirmed[$c]['bug_ID'] . ' AND vote = "yes"';
+                $SQLRequestNoVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $confirmed[$c]['bug_ID'] . ' AND vote = "no"';
+                $yesVotes = parseQuery($database, $SQLRequestYesVotes);
+                $noVotes = parseQuery($database, $SQLRequestNoVotes);
+                $votes = $yesVotes[0] - $noVotes[0];
+                $confirmed[$c]['votes'] = $votes;
+            }
         }
     }
 
     if(gettype($unconfirmedBugs) == 'object'){
         $uRequest = mysqli_query($database, $SQLRequestUnconfirmedBugs);
-        $u = 0;
         while($UCB = mysqli_fetch_assoc($uRequest)){
             $unconfirmed[] = $UCB;
+        }
+
+        $countUnconfirmed = count($unconfirmed);
+        if($countUnconfirmed != 0){
+            $countUnconfirmed--;
+            $u = -1;
+            while($countUnconfirmed != $u){
+                $u++;
+                $SQLRequestYesVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $unconfirmed[$u]['bug_ID'] . ' AND vote = "yes"';
+                $SQLRequestNoVotes = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $unconfirmed[$u]['bug_ID'] . ' AND vote = "no"';
+                $yesVotes = parseQuery($database, $SQLRequestYesVotes);
+                $noVotes = parseQuery($database, $SQLRequestNoVotes);
+                $votes = $yesVotes[0] - $noVotes[0];
+                $unconfirmed[$f]['votes'] = $votes;
+            }
         }
     }
 ?>

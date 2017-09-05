@@ -16,32 +16,41 @@
         include($rootdir . "admin/database.inc.php");
         $database = connectDatabase();
         $bug_ID = $_GET['id'];
+        $RequestVoted = 'SELECT * FROM votes WHERE bug_ID = ' . $bug_ID . ' AND user_ID = "'. $_SESSION['user_ID'] . '"';
+        $ResultVoted = parseQuery($database, $RequestVoted);
+        if($ResultVoted != false){
+            $voted = true;
+            if($ResultVoted['vote'] == "yes"){
+                $votedYes = true;
+            } else {
+                $votedNo = true;
+            }
+        } else {
+            $voted = false;
+        }
 
-    if($_POST['yes'] || $_POST['no']){
+    if($_POST && $voted == false){
             if($_POST['yes']){
-                $RequestVotes = "SELECT votes FROM bugs WHERE bug_ID = " . $bug_ID;
-                $votes = parseQuery($database, $RequestVotes);
-
-                $votes['votes'] += 1;
-
-                $UpdateVotes = "UPDATE bugs SET votes = " . $votes['votes'] . " WHERE bug_ID = " . $bug_ID;
+                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "yes"';
                 parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
             }
 
             if($_POST['no']){
-                $RequestVotes = "SELECT votes FROM bugs WHERE bug_ID = " . $bug_ID;
-                $votes = parseQuery($database, $RequestVotes);
-
-                $votes['votes'] -= 1;
-
-                $UpdateVotes = "UPDATE bugs SET votes = " . $votes['votes'] . " WHERE bug_ID = " . $bug_ID;
+                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "no"';
                 parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
             }
     }
         $RequestReport = 'SELECT * FROM bugs WHERE bug_ID = ' . $bug_ID;
         $bug = parseQuery($database, $RequestReport);
+        $RequestVoteYesCount = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $bug_ID . ' AND vote = "yes"';
+        $RequestVoteNoCount = 'SELECT COUNT(vote) FROM votes WHERE bug_ID = ' . $bug_ID . ' AND vote = "no"';
+        $yesVotes = parseQuery($database, $RequestVoteYesCount);
+        $noVotes = parseQuery($database, $RequestVoteNoCount);
+        $votes = $yesVotes[0] - $noVotes[0];
+        $bug['votes'] = $votes;
+
     ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -102,9 +111,9 @@
             <?php
             if($bug['status'] != "Solved"){
                 if($voted){
-                    if($_POST['yes']){
+                    if($votedYes){
                         echo '<button id="VoteYes">Yes</button><button>No</button>';
-                    } else if($_POST['no']){
+                    } else if($votedNo){
                         echo '<button>Yes</button><button id="VoteNo">No</button>';
                     }
                 
