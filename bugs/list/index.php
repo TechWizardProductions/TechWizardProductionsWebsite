@@ -134,7 +134,7 @@
                 $yesVotes = parseQuery($database, $SQLRequestYesVotes);
                 $noVotes = parseQuery($database, $SQLRequestNoVotes);
                 $votes = $yesVotes[0] - $noVotes[0];
-                $unconfirmed[$f]['votes'] = $votes;
+                $unconfirmed[$u]['votes'] = $votes;
             }
         }
     }
