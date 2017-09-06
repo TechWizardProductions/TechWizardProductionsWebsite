@@ -30,16 +30,18 @@
         }
 
     if($_POST && $voted == false){
-            if($_POST['yes']){
-                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "yes"';
+            if(isset($_POST['yes'])){
+                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "yes")';
                 parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
+                $votedYes = true;
             }
 
-            if($_POST['no']){
-                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "no"';
+            if(isset($_POST['no'])){
+                $UpdateVotes = 'INSERT INTO votes (bug_ID, user_ID, vote) VALUES (' . $bug_ID . ',' . $_SESSION['user_ID'] . ', "no")';
                 parseQueryOnly($database, $UpdateVotes);
                 $voted = true;
+                $votedNo = true;
             }
     }
         $RequestReport = 'SELECT * FROM bugs WHERE bug_ID = ' . $bug_ID;

@@ -21,12 +21,11 @@
             $name = $_POST['name']; 
             $desc = $_POST['description'];
             $date = date("Y-m-j");
-            $votes = 0;
             $status = "Unconfirmed";
 
-            $InsertBugReport = 'INSERT INTO bugs (name, votes, status, date, user, description)
-                                VALUES ("' . $name . '", "' . $votes . '", "' . $status . '", "' . $date . '", "' . $usr . '", "' . $desc . '")';
-            if(!parseQueryOnly($database, $InsertBugReport)){
+            $InsertBugReport = 'INSERT INTO bugs (name, status, date, user, description)
+                                VALUES ("' . $name . '", "' . $status . '", "' . $date . '", "' . $usr . '", "' . $desc . '")';
+            if(!mysqli_query($database, $InsertBugReport)){
                 echo "Reporting bug failed! Please try again.";
             } else {
                 $email = "techwizardproductions@gmail.com";
@@ -48,7 +47,7 @@
     ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 05/09/2017-->
+<!-- Last edited on 06/09/2017-->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">

@@ -39,7 +39,7 @@
             for ($i = 1; $i < $max; $i++){
                 $j = $max - $i;
                 $SQLRequestPatchNumber = "SELECT number from twppatches WHERE patch_ID = $j";
-                $patchNumber = parseQuery($SQLRequestPatchNumber);
+                $patchNumber = parseQuery($database, $SQLRequestPatchNumber);
                 echo '<a href="'. $rootdir . 'projects/TWPWeb/patchlist/patch.php?patch=' . $j . '">Patch '. $patchNumber['number'] .'</a><br/>';
             }
             echo '<a href="'. $rootdir . 'projects/TWPWeb/patchlist/patch.php?patch=Legacy">Legacy Patch</a>';
