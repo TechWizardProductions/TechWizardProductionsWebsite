@@ -81,6 +81,7 @@ if ($usrStat ==true && $pwrdStat == true){
     $_SESSION['firstName'] = $result['firstName'];
     $_SESSION['lastName'] = $result['lastName'];
     $_SESSION['password'] = $result['password'];
+    $_SESSION['rank'] = $result['rank'];
     
     
     //Logging code

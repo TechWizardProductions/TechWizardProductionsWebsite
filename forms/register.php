@@ -121,7 +121,7 @@ fputs($logFile, date("d.m.Y, H:i:s", time()) . "[CONSOLE]: Email address check c
 
             } else {
                 //Send records to the database
-                $SQLRegisterUsr = "INSERT INTO Accounts (username, password, firstName, lastName, email) VALUES ('". $username . "', '" . $password . "', '" . $firstName . "', '" . $lastName . "', '" . $email . "')";
+                $SQLRegisterUsr = "INSERT INTO Accounts (username, password, firstName, lastName, email, rank) VALUES ('". $username . "', '" . $password . "', '" . $firstName . "', '" . $lastName . "', '" . $email . "', 'member')";
                 $registered = parseQuery($database, $SQLRegisterUsr);
 
                 if(!is_null($registered)){
