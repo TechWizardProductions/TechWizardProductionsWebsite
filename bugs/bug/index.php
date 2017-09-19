@@ -2,9 +2,14 @@
         session_start();
         $rootdir = "../../";
     if(isset($_SESSION['timeout']) && isset($_SESSION['auth'])){
-        if($_SESSION['timeout'] >= time() && $_SESSION['auth'] == true){
+        if($_SESSION['auth'] == true && $_SESSION['timeout'] >= time() && $_SESSION['rank'] == "admin"){
+            include($rootdir . "style/bugNav.inc.php");
+            $_SESSION['timeout'] = time() + $_SESSION['timeoutTime'];
+            $admin = true;
+        } else if($_SESSION['timeout'] >= time() && $_SESSION['auth'] == true){
             include($rootdir . "style/bugNav.inc.php");
             $_SESSION['timeout'] += time();
+            $admin = false;
         }
     } else {
         echo '<script type=text/javascript>
@@ -28,6 +33,17 @@
         } else {
             $voted = false;
         }
+    if(isset($_POST['sendUpdate'])){
+        $status = $_POST['status'];
+        switch($status){
+            case 1: $stat = "Unconfirmed"; break;
+            case 2: $stat = "Confirmed"; break;
+            case 3: $stat = "In Progress"; break;
+            case 4: $stat = "Fixed"; break;
+        }
+        $SQLUpdateStatus = 'UPDATE bugs SET status = "' . $stat . '" WHERE bug_ID = ' . $bug_ID;
+        parseQueryOnly($database, $SQLUpdateStatus);
+    }
 
     if($_POST && $voted == false){
             if(isset($_POST['yes'])){
@@ -52,11 +68,10 @@
         $noVotes = parseQuery($database, $RequestVoteNoCount);
         $votes = $yesVotes[0] - $noVotes[0];
         $bug['votes'] = $votes;
-
     ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!-- Last edited on 05/09/2017-->
+<!-- Last edited on 19/09/2017-->
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo $rootdir; ?>style/bug.css">
@@ -111,7 +126,7 @@
             </td>
             <td>
             <?php
-            if($bug['status'] != "Solved"){
+            if($bug['status'] != "Fixed"){
                 if($voted){
                     if($votedYes){
                         echo '<button id="VoteYes">Yes</button><button>No</button>';
@@ -130,6 +145,48 @@
             }
             ?>   
             </td>
+        </tr>
+        <tr>
+            <td>
+                <?php 
+                if($admin == true){
+                    echo'Edit status:';
+                }
+                ?>
+            </td>
+            <form name="statusUpdate" method="post" action=" <?php echo $rootdir; ?>bugs/bug/?id=<?php echo $bug_ID; ?>">          
+            <td>
+                <?php 
+                if($admin == true){
+                    echo '<select name="status">';
+                    if($bug['status'] == "Unconfirmed"){
+                        echo '<option value=1 selected>Unconfirmed</option>';
+                    } else {
+                        echo '<option value=1>Unconfirmed</option>';
+                    }
+                    if($bug['status'] == "Confirmed"){
+                        echo '<option value=2 selected>Confirmed</option>';
+                    } else {
+                        echo '<option value=2>Confirmed</option>';
+                    }
+                    if($bug['status'] == "In Progress"){
+                        echo '<option value=3 selected>In Progress</option>';
+                    } else {
+                        echo '<option value=3>In Progress</option>';
+                    }
+                    if($bug['status'] == "Fixed"){
+                        echo '<option value=4 selected>Fixed</option>';
+                    } else {
+                        echo '<option value=4>Fixed</option>';
+                    }
+                    echo '</form>';
+                }
+                ?>
+            </td>
+            <td>
+                <input type="submit" value="Update" name="sendUpdate">
+            </td>
+            </form>
         </tr>
 </body>
 </html>
