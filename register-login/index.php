@@ -17,7 +17,7 @@ $rootdir = "../";
 
         include($rootdir . "style/navigation.inc.php");
 ?>
-    <div id="content">';
+    <div id="content">
         <?php
         if (isset($_SESSION['auth']) && isset($_SESSION['timeout'])){
             if($_SESSION['auth'] == true && $_SESSION['timeout'] >= time()){
