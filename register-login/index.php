@@ -24,14 +24,22 @@ $rootdir = "../";
                 $_SESSION['timeout'] = time() + $_SESSION['timeoutTime'];
                 echo "You have been logged in already. There will not be anything useful for you on this page.";
             }
-        } else {
-        include($rootdir . "forms/register.inc.php");
-
-        echo '<div id="logIn">';
-        echo "Already a member? Log in below!";
+            else {
+                include($rootdir . "forms/register.inc.php");
         
-        include($rootdir . "forms/logIn.inc.php");
-        }
+                echo '<div id="logIn">';
+                echo "Already a member? Log in below!";
+                
+                include($rootdir . "forms/logIn.inc.php");
+                }
+        } else {
+            include($rootdir . "forms/register.inc.php");
+    
+            echo '<div id="logIn">';
+            echo "Already a member? Log in below!";
+            
+            include($rootdir . "forms/logIn.inc.php");
+            }
         ?>
     </div>
     <?php
